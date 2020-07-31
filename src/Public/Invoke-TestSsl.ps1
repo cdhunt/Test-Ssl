@@ -21,6 +21,10 @@ function Invoke-TestSsl {
         [switch]
         $JsonFile,
 
+        [Parameter()]
+        [switch]
+        $HtmlFile,
+
         [Parameter(Position=1)]
         [ValidateSet('3.0','3.1dev','latest')]
         [string]
@@ -45,6 +49,9 @@ function Invoke-TestSsl {
     }
     if ($JsonFile) {
         $test = $test.Json()
+    }
+    if ($HtmlFile) {
+        $test = $test.Html()
     }
     if ($PSBoundParameters.ContainsKey('Tag')) {
         $test.Tag = $Tag

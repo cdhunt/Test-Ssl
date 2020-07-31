@@ -45,6 +45,13 @@ class TestSsl {
         return $this
     }
 
+    [TestSsl] Html()
+    {
+        $this.TestSslOptions += '--htmlfile "out/"'
+        $this.DockerOptions += '-v "$($pwd.path):/home/testssl/out"'
+        return $this
+    }
+
     [TestSsl] Severity([string]$sev)
     {
         if ($sev -notin @('Low','Medium','High','Critical'))
