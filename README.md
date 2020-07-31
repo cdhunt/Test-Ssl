@@ -1,6 +1,8 @@
 # Test-Ssl
 
-## [https://testssl.sh/](https://testssl.sh/)
+A simple wrapper around the testssl.sh docker image.
+
+### [https://testssl.sh/](https://testssl.sh/)
 
 ## Usage
 
